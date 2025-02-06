@@ -1,0 +1,9 @@
+TASKS FOR WEBSITE
+
+- Add "Contact" footer with LinkedIn and Github
+- Populate Experiences and projects with rich descriptions, Portfolio Items, and photos (Come up with a general scheme?)
+- Add an "Other Projects" option on the dropdown for non-professional additions to the portfolio (Midd stuff, etc.)
+- Update Actual C.V.!
+- Add a page for your Music - this comes later.
+- General website files org - folder structure and internal structure.
+- Ensure components of HTML that need to be generally applicable are consistent - is there a way to package these up?

@@ -1,57 +1,113 @@
+/* General Page Styles */
 body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1c1c1c; /* Dark, neutral background */
+    color: #EAEAEA; /* Soft off-white text for readability */
 }
 
-/* Fixed Header */
+/* Header */
 header {
     font-family: 'Noto Sans', sans-serif;
-    background: linear-gradient(135deg, #333, #007acc);
+    background: linear-gradient(135deg, #252525, #3A5F5F); /* Dark gray to muted forest green */
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     padding: 1rem 0;
     text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Stays above other elements */
+    z-index: 1000;
 }
 
-/* Fixed Navbar (Moves Below Header) */
+/* Navbar */
 nav {
     font-family: 'Playfair Display', serif;
     display: flex;
     justify-content: center;
-    background: rgba(0, 122, 204, 0.9);
+    align-items: center;
+    background: rgba(30, 30, 30, 0.9); /* Slight transparency */
     backdrop-filter: blur(5px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 0.5rem;
     position: fixed;
-    top: 120px; /* 🛠 Moves navbar down so it doesn’t overlap */
+    top: 120px;
     left: 0;
     width: 100%;
-    z-index: 999; /* Keeps it below the header */
+    z-index: 999;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-/* Fix Links Inside Navbar */
+/* Navbar Links */
 nav a {
     font-family: 'Playfair Display', serif;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D3BFA7; /* Sand-tone links */
     margin: 0 1rem;
     text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease-in-out;
+    padding: 0.75rem 1.5rem;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #bcae2c;
+    background: rgba(56, 86, 86, 0.5); /* Deep teal on hover */
+    color: #EAEAEA;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    font-family: 'Playfair Display', serif;
+    background: none;
+    border: none;
+    color: #D3BFA7;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2B2B2B; /* Dark gray dropdown menu */
+    min-width: 200px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #EAEAEA;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background: rgba(56, 86, 86, 0.4); /* Soft teal on hover */
+    color: #D3BFA7;
 }
 
 /* Page Content */
@@ -60,65 +116,18 @@ nav a:hover {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-    background: white;
+    background: #2B2B2B; /* Dark slate gray */
+    color: #EAEAEA;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Fix Content Being Hidden Behind Navbar */
 body {
-    padding-top: 180px; /* Pushes content below the fixed navbar */
+    padding-top: 185px;
 }
 
-/* 🔹 DROPDOWN STYLING */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    color: white;
-    padding: 0.5rem;
-    text-decoration: none;
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-    line-height: normal; /* Prevents unexpected vertical shifts */
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(229, 227, 227);
-    min-width: 200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    border-radius: 5px;
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-/* Hover Effect */
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* 🔹 EXPERIENCE LANDING PAGE */
+/* Experience Grid */
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -126,51 +135,50 @@ body {
     margin-top: 20px;
 }
 
-/* 🔹 EXPERIENCE CARDS */
+/* Experience Cards */
 .experience-card {
     display: block;
-    background: white;
+    background: #2B2B2B;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-    color: #333;
+    color: #EAEAEA;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .experience-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(50, 150, 150, 0.3);
 }
 
-/* 🔹 STYLING FOR SPECIFIC EXPERIENCE PAGES */
-/* 🔹 Article Layout for Storytelling */
+/* Experience Content */
 .experience-container {
     max-width: 900px;
     margin: 60px auto;
     padding: 20px;
-    background: white;
+    background: #2B2B2B;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 100, 0, 0.2);
     line-height: 1.8;
 }
 
-/* 🔹 Headings for Structure */
+/* Headings */
 .experience-container h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #333;
+    color: #72A0A0; /* Muted deep teal */
 }
 
-/* 🔹 Blockquote (Callout Quote) */
+/* Blockquote */
 blockquote {
     font-style: italic;
-    color: #555;
-    border-left: 4px solid #007acc;
+    color: #EAEAEA;
+    border-left: 4px solid #3A5F5F;
     padding-left: 16px;
     margin: 20px 0;
 }
 
-/* 🔹 Image Container with Caption */
+/* Image Styling */
 .image-container {
     text-align: center;
     margin: 20px 0;
@@ -184,11 +192,11 @@ blockquote {
 
 .image-container .caption {
     font-size: 14px;
-    color: #555;
+    color: #bbb;
     margin-top: 5px;
 }
 
-/* 🔹 List Styling */
+/* List Styling */
 .experience-container ul {
     list-style-type: none;
     padding: 0;
@@ -198,4 +206,16 @@ blockquote {
     background: url('assets/checkmark.png') left center no-repeat;
     padding-left: 30px;
     margin-bottom: 10px;
+}
+
+/* Standard Links */
+a {
+    color: #286D6D; /* Deep teal links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #D3BFA7; /* Soft sand highlight */
+    text-decoration: underline;
 }
