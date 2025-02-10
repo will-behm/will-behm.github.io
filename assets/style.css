@@ -219,3 +219,14 @@ a:hover {
     color: #D3BFA7; /* Soft sand highlight */
     text-decoration: underline;
 }
+
+/* IMAGES */
+img {
+    width: 70%;  /* Makes images scale responsively */
+    max-width: 400px; /* Adjusts max width */
+    height: auto;  /* Keeps aspect ratio */
+    display: block; /* Prevents extra spacing issues */
+    margin: 10px auto; /* Centers the image */
+    border-radius: 8px; /* Optional: rounds corners for a clean look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
