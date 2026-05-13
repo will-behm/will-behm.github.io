@@ -2,7 +2,7 @@
 Github Pages portfolio site
 
 ## What I'm working on
-There are so many ways I want to make this site cooler than it is. Here are some of them, mostly for me. If you're a person who isn't me and you're reading this, I applaude your thorough search of my online presence.
+There are so many ways I want to make this site cooler than it is. Here are some of them, mostly for me. If you're a person who isn't me and you're reading this, I applaud your thorough search of my online presence.
 
 - Update C.V.
 - Add more recent photos, especially on the home page. 
