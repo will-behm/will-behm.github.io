@@ -12,24 +12,26 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header>
-        <h1>Will Behm</h1>
-    </header>
-    <nav>
-        <a href="/index.html">About</a>
-        <div class="dropdown">
-            <a href="/experience.html" class="dropbtn">Experience</a>
-            <div class="dropdown-content">
-                <a href="/experience/landweb.html">LandWEB Inc.</a>
-                <a href="/experience/tnc.html">The Nature Conservancy</a>
-                <a href="/experience/south-slough.html">South Slough NERR</a>
-                <a href="/experience/ccj.html">Center for Coalfield Justice</a>
-                <a href="/experience/cartography.html">Cartography</a>
+    <div class="site-header">
+        <header>
+            <h1>Will Behm</h1>
+        </header>
+        <nav>
+            <a href="/index.html">About</a>
+            <div class="dropdown">
+                <a href="/experience.html" class="dropbtn">Experience</a>
+                <div class="dropdown-content">
+                    <a href="/experience/landweb.html">LandWEB Inc.</a>
+                    <a href="/experience/tnc.html">The Nature Conservancy</a>
+                    <a href="/experience/south-slough.html">South Slough NERR</a>
+                    <a href="/experience/ccj.html">Center for Coalfield Justice</a>
+                    <a href="/experience/cartography.html">Cartography</a>
+                </div>
             </div>
-        </div>
-        <a href="/Music.html">Music</a>
-        <a href="/cv.html">C.V.</a>
-    </nav>
+            <a href="/Music.html">Music</a>
+            <a href="/cv.html">C.V.</a>
+        </nav>
+    </div>
 
     <div class="container">
         <div class="about-layout">
@@ -46,5 +48,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const siteHeader = document.querySelector('.site-header');
+        document.body.style.paddingTop = siteHeader.offsetHeight + 'px';
+    </script>
 </body>
 </html>

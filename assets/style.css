@@ -20,7 +20,7 @@ body {
   padding: 0;
   background-color: var(--bg);
   color: var(--text-primary);
-  padding-top: 120px;
+  padding-top: 120px; /* fallback; overridden by JS once .site-header height is known */
 }
 
 a {
@@ -35,17 +35,23 @@ a:hover {
 }
 
 /* ===== HEADER ===== */
+/* ===== STICKY HEADER WRAPPER ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   font-family: 'Playfair Display', serif;
   background: var(--header-bg);
   color: var(--bg);
   padding: 1.1rem 0;
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
 }
 
 header h1 {
@@ -63,11 +69,6 @@ nav {
   align-items: stretch;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  position: fixed;
-  top: 68px;
-  left: 0;
-  width: 100%;
-  z-index: 999;
 }
 
 nav a {
@@ -326,7 +327,6 @@ img {
   }
 
   nav {
-    top: 53px;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
