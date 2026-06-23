@@ -50,8 +50,12 @@
     </div>
 
     <script>
-        const siteHeader = document.querySelector('.site-header');
-        document.body.style.paddingTop = siteHeader.offsetHeight + 'px';
+        function setBodyPadding() {
+            const siteHeader = document.querySelector('.site-header');
+            document.body.style.paddingTop = siteHeader.offsetHeight + 'px';
+        }
+        document.fonts.ready.then(setBodyPadding);
+        window.addEventListener('resize', setBodyPadding);
     </script>
 </body>
 </html>
