@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <div class="site-header">
     <header>
         <h1>Will Behm</h1>
     </header>
@@ -30,6 +31,8 @@
         <a href="/Music.html">Music</a>
         <a href="/cv.html">C.V.</a>
     </nav>
+    </div>
+
     <div class="container">
 
         <div class="image-container">
@@ -47,5 +50,9 @@
             Here's a link to  <a href="https://www.instagram.com/willbehmusic/" target="_blank">music instagram</a>. I love teaching, and give acoustic guitar lessons in person or over zoom. Don't hestitate to get in contact if you're interested!
         </p>
     </div>
+    <script>
+        const siteHeader = document.querySelector(".site-header");
+        document.body.style.paddingTop = siteHeader.offsetHeight + "px";
+    </script>
 </body>
 </html>

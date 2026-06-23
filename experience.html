@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <div class="site-header">
     <header>
         <h1>Will Behm</h1>
     </header>
@@ -30,6 +31,8 @@
             <a href="/Music.html">Music</a>
             <a href="/cv.html">C.V.</a>
         </nav>
+    </div>
+
     <div class="container">
         <h2>Professional Experience</h2>
         <p>Over the years, I've worked with a host of organizations across the environmental sector. Click on an organization to learn more about my role and contributions.</p>
@@ -57,5 +60,9 @@
             </a>
         </div>
     </div>
+    <script>
+        const siteHeader = document.querySelector(".site-header");
+        document.body.style.paddingTop = siteHeader.offsetHeight + "px";
+    </script>
 </body>
 </html>
